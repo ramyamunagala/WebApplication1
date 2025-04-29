@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: WebApplication1
-  labels: WebApplication1
+  labels:
+    app: WebApplication1
 spec:
   replicas: 3
   selector:
@@ -15,6 +16,6 @@ spec:
     spec:
       containers:
       - name: webapplication1
-        Image: 868287237824.dkr.ecr.us-east-1.amazonaws.com/kube-system/webaplication1
+        image: 868287237824.dkr.ecr.us-east-1.amazonaws.com/webapplication1:webapplication1
         ports:
         - containerPort: 80
